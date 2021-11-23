@@ -23,10 +23,10 @@ phases:
   build:
     commands:
       - echo Build started
-      - docker build -t encoder4video:$TARGET --build-arg APPLICATION=encoder4video --build-arg ECR=${ECR} --build-arg APP=${APP} --build-arg TARGET=${branch} .
+      - docker build -t $APP:$TARGET --build-arg source=$source --build-arg destination=$destination .
       - echo Build done
 
   post_build:
     commands:
-      - docker tag encoder4video:$TARGET $ENCODER4VIDEO_ECR:$TARGET
-      - docker push $ENCODER4VIDEO_ECR:$TARGET
+      - docker tag $APP:$TARGET $COPY3S_ECR:$TARGET
+      - docker push $COPY3S_ECR:$TARGET

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-export ECR=034636010673.dkr.ecr.ap-northeast-2.amazonaws.com
+export ECR=xxxxxxxxxx.dkr.ecr.ap-northeast-2.amazonaws.com
 export APP=test-copys3
 export AWS_PROFILE=skt-jaeilkim
 export TARGET=latest
